@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap");
+
+/*=============== FONTS ===============*/
+@font-face {
+    font-family: "font-1";
+    src: url(../fonts/Switzer-Extralight.ttf);
+}
+
+@font-face {
+    font-family: "font-2";
+    src: url(../fonts/Switzer-Light.ttf);
+}
+
+@font-face {
+    font-family: "font-3";
+    src: url(../fonts/Switzer-Regular.ttf);
+}
+
+@font-face {
+    font-family: "font-4";
+    src: url(../fonts/Switzer-Bold.ttf);
+}
+
+@font-face {
+    font-family: "font-5";
+    src: url(../fonts/Caveat-Regular.ttf);
+}
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --color1: rgba(32, 32, 32, 1);
+    --color2: rgba(255, 255, 255, 1);
+    --color3: rgba(32, 32, 32, 1);
+    --color4: rgba(112, 208, 56, 1);
+    --color5: #16161669;
+    --color6: #00000069;
+}
+/* Création des variables */
+:root {
+    --firstColor: rgba(32, 32, 32, 1);
+    --secondColor: rgba(112, 208, 56, 1);
+    --thirdColor: rgba(255, 255, 255, 1);
+    --lightGrey: rgba(255, 255, 255, 0.2);
+    --dark: rgba(16, 16, 16, 1);
+    --blackDark: rgba(0, 0, 0, 1);
+}
+/*=============== BASE ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+*::selection {
+    background-color: var(--color5);
+}
+
+body {
+    font-family: "font-3";
+    font-size: 1rem;
+    color: var(--color2);
+    background-color: var(--color3);
+}
+
+/*=============== HEADER ===============*/
+header {
+    height: 115px;
+    width: 100vw;
+    position: fixed;
+    z-index: 100;
+    background-color: var(--color5);
+    backdrop-filter: blur(5px);
+}
+
+.top-header {
+    width: 100%;
+    height: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    background-color: var(--color5);
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 20%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color2);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--color4);
+}
+
+.icon {
+    color: var(--color2);
+    font-size: 1.2rem;
+    border: 1px solid var(--color2);
+    border-radius: 5px;
+}
+
+.icon:hover {
+    font-size: 1.2rem;
+    transition: 0.5s;
+    background-color: var(--color4);
+    transition: 0.2s;
+}
+
+.billeterie {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.bot-header {
+    width: 100%;
+    height: 40px;
+    background-color: var(--color6);
+    padding-right: 80px;
+}
+
+.reseaux {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.reseaux a:nth-child(0n + 2) {
+    margin: 10px;
+}
+
+#logo {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80px;
+    width: auto;
+}
+
+
+
+.container {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bigHeader {
+    width: 100%;
+    background-color: var(--blackDark);
+    position: relative;
+}
+
+.bigHeader ul {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    font-size: 1.2em;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1rem 2%;
+}
+
+.bigHeader a {
+    text-decoration: none;
+    color: var(--lightGrey);
+}
+
+.associations {
+    background-color: rgba(32, 32, 32, 1);
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+}
+
+h2 {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 2.5%;
+    font-family: "Caveat", cursive;
+}
+
+button {
+    line-height: 20px;
+    vertical-align: baseline;
+    letter-spacing: normal;
+    word-spacing: 0px;
+    margin: 0px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    font-weight: 700;
+    font-style: normal;
+    font-variant: normal;
+    background-color: rgba(32, 32, 32, 1);
+}
+
+.buttonsTabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+:hover button a {
+    background-color: #57af37;
+}
+
+.tab-content div {
+    width: 55%;
+    background-color: rgba(32, 32, 32, 1);
+    color: rgba(255, 255, 255, 1);
+    margin: 0 auto;
+    padding-bottom: 100px;
+    line-height: 1.5;
+    display: none;
+}
+
+.tab-content div.active {
+    display: block;
+}
+
+/* .middle p{
+    text-align: justify;
+} */
+.associations p,
+ol,
+ul {
+    text-align: justify;
+}
+
+/* ********** */
+/* Test onglet */
+.Tabs {
+    display: flex;
+    justify-content: center;
+    /* grid: 10px; */
+    gap: 10px;
+}
+
+.Tabs button {
+    /* border: solid 1px red; */
+    border: solid white 1px;
+    border-radius: 5px;
+    padding: 1%;
+    -webkit-border-radius: 5px;
+}
+
+.Tabs button:hover {
+    background: var(--secondColor);
+    cursor: pointer;
+    color: var(--thirdColor);
+}
+
+/* fin test onglet */
+/* ***************** */
+.Tabs a {
+    color: white;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.site {
+    padding: 0.85em;
+    background-color: var(--secondColor);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: var(--thirdColor);
+}
+
+.site+p {
+    margin-top: 30px;
+}
+
+.tab3_SeaShepherd img {
+    width: 180px;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: "Caveat", cursive;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: "Caveat", cursive;
+    font-size: 2rem;
+    color: var(--secondColor);
+    text-align: center;
+    margin: 20px 0 20px;
+}
+
+/* Centrage des logos */
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+}
+
+/* modification de la taille des images de logos + contour ombre autour*/
+/* Correction en cours.... */
+.seasheperd_logo,
+.fdf_logo,
+.tftp_logo,
+.logo_lpo,
+.wwf {
+    width: 25%;
+    filter: drop-shadow(2px 2px 0px var(--lightGrey));
+    -webkit-filter: drop-shadow(2px 2px 0px var(--lightGrey));
+}
+
+.theseacleaners_logo {
+    width: 15%;
+    filter: drop-shadow(2px 2px 0px var(--lightGrey));
+    -webkit-filter: drop-shadow(2px 2px 0px var(--lightGrey));
+}
+
+/* couleur pour les liens hypertextes */
+
+.chiffre h4 {
+    color: var(--secondColor);
+    font-size: 1.5rem;
+}
+
+.chiffre {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    border: solid 1px var(--thirdColor);
+    border-radius: 5px;
+    padding: 1em;
+    margin: 1em;
+    word-break: break-word;
+}
+
+/* modification taille des liens vidéo */
+iframe {
+    width: 100%;
+}
+
+.figurelpo {
+    width: 100%;
+    display: flex;
+}
+
+.figurelpo img {
+    width: 100%;
+}
+
+/* modification boutons WWF */
+.container_link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 40px;
+}
+
+.container_link a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.85em;
+    background-color: var(--secondColor);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: var(--thirdColor);
+    text-shadow: 1px 1px 5px var(--dark);
+}
