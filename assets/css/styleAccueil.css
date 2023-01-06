@@ -276,6 +276,7 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-row-gap: 30px;
   width: 100%;
+
  
   
 }
@@ -285,6 +286,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  
 }
 
 
@@ -297,9 +299,10 @@ h2 {
 }
 
 .img-streamer {
-  border: 8px solid var(--color1);
+  border: 8px solid var(--color6);
   border-radius: 25px;
   height: 150px;
+
 }
 
 .img-streamer:hover {
